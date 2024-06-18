@@ -6,6 +6,15 @@ from ast2vec import python_ast_utils
 path = "./data"
 trees = []  # A list where we are going to store the AST's
 X = []  # A list with all the vectors
+y = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 1],
+    [0, 1, 0],
+    [0, 1, 0],
+    [0, 1, 1],
+    [1, 0, 0],
+]  # Vectors representing the labels
 
 # Reading all the codes as .txt and parsing them
 for programs in os.listdir(path):
@@ -18,7 +27,4 @@ model = ast2vec.load_model()
 
 # Generating the code vectors and storing in X
 for tree in trees:
-    X.append(model.encode(tree))
-
-print(X[0])
-print(trees[0])
+    X.append(model.encode(tree).detach().numpy())
