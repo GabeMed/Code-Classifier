@@ -2,10 +2,12 @@ import ast
 import os
 from ast2vec import ast2vec
 from ast2vec import python_ast_utils
+import numpy as np
 
+# Configurações de caminho e inicialização de listas
 path = "./data"
-trees = []  # A list where we are going to store the AST's
-X = []  # A list with all the vectors
+trees = []
+X = []
 y = [
     [0, 0, 0],
     [0, 0, 0],
@@ -14,17 +16,22 @@ y = [
     [0, 1, 0],
     [0, 1, 1],
     [1, 0, 0],
-]  # Vectors representing the labels
+]
 
-# Reading all the codes as .txt and parsing them
-for programs in os.listdir(path):
-    with open(path + "/" + programs, "r") as file:
-        program = file.read()
-    trees.append(python_ast_utils.ast_to_tree(ast.parse(program)))
+# Leitura dos códigos e parsing para AST
+for file_name in os.listdir(path):
+    if file_name.endswith(".py"):  # Verifica se o arquivo é Python
+        with open(os.path.join(path, file_name), "r") as file:
+            program = file.read()
+        trees.append(python_ast_utils.ast_to_tree(ast.parse(program)))
 
-# Loading the model
+# Carregamento do modelo
 model = ast2vec.load_model()
 
-# Generating the code vectors and storing in X
+# Geração dos vetores de código
 for tree in trees:
     X.append(model.encode(tree).detach().numpy())
+
+# Convertendo para tipo numpy array
+y = np.array(y)
+X = np.array(X)
