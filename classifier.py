@@ -32,3 +32,7 @@ cm = confusion_matrix(y_test.argmax(axis=1), y_pred.argmax(axis=1))
 disp = ConfusionMatrixDisplay(confusion_matrix=cm)
 disp.plot()
 plt.show()
+
+# Previsões x Valores
+for pred, true in zip(y_pred, y_test):
+    print(f"Prediction :{pred} || True Value :{true}")
