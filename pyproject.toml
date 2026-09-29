@@ -1,0 +1,18 @@
+# Tool configuration only. Dependencies are pinned in requirements*.txt and
+# requirements.lock (full resolution for Python 3.11).
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+extend-exclude = ["data", "vendor"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+
+[tool.ruff.lint.isort]
+known-third-party = ["ast2vec", "python_ast_utils"]

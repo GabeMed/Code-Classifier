@@ -1,0 +1,5 @@
+# Needed only for --features ast2vec. The ast2vec code itself is not on PyPI;
+# `make ast2vec` clones it into vendor/ast2vec at a pinned commit.
+-r requirements.txt
+torch==2.3.1
+astor==0.8.1
