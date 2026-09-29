@@ -1,0 +1,269 @@
+{
+  "features": "ast-counts",
+  "cv": "loo",
+  "n_programs": 7,
+  "n_features": 107,
+  "model": {
+    "exact_match_accuracy": 0.0,
+    "hamming_accuracy": 0.5238095238095238,
+    "per_label": [
+      {
+        "label": "t0",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1,
+        "confusion": [
+          [
+            6,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "label": "t1",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3,
+        "confusion": [
+          [
+            0,
+            4
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "label": "t2",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2,
+        "confusion": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      }
+    ],
+    "combinations": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100"
+    ],
+    "combination_confusion": [
+      [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  },
+  "baseline": {
+    "exact_match_accuracy": 0.2857142857142857,
+    "hamming_accuracy": 0.7142857142857143,
+    "per_label": [
+      {
+        "label": "t0",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1,
+        "confusion": [
+          [
+            6,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      {
+        "label": "t1",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 3,
+        "confusion": [
+          [
+            4,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "label": "t2",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2,
+        "confusion": [
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      }
+    ],
+    "combinations": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100"
+    ],
+    "combination_confusion": [
+      [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "seed_spread": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "exact_match": [
+      0.0,
+      0.0,
+      0.0,
+      0.14285714285714285,
+      0.14285714285714285,
+      0.14285714285714285,
+      0.0,
+      0.0,
+      0.14285714285714285,
+      0.0
+    ],
+    "mean": 0.05714285714285714,
+    "std": 0.06998542122237651
+  },
+  "permutation_test": {
+    "n_permutations": 200,
+    "score": 0.0,
+    "permuted_mean": 0.14357142857142854,
+    "p_value": 1.0
+  },
+  "programs": [
+    "exp1.py",
+    "exp2.py",
+    "exp3.py",
+    "exp4.py",
+    "exp5.py",
+    "exp6.py",
+    "exp7.py"
+  ],
+  "true": [
+    "000",
+    "000",
+    "001",
+    "010",
+    "010",
+    "011",
+    "100"
+  ],
+  "predicted": [
+    "010",
+    "010",
+    "010",
+    "000",
+    "000",
+    "000",
+    "010"
+  ]
+}
